@@ -22,13 +22,13 @@ function Navbar({CartCount,SetCartCount}) {
                     </ul>
                 </li>
             </ul>
-            <form className="d-flex">
-                <button className="btn btn-outline-dark" type="submit" onClick={()=>navigate('/Cart')}>
+            <div className="d-flex">
+                <button className="btn btn-outline-dark" onClick={()=>navigate('/Cart')}>
                     <i className="bi-cart-fill me-1"></i>
                     Cart
                     <span className="badge bg-dark text-white ms-1 rounded-pill">{CartCount}</span>
                 </button>
-            </form>
+            </div>
         </div>
     </div>
 </nav>  
