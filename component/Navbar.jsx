@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Navbar({CartCount,SetCartCount}) {
+    let navigate = useNavigate()
   return <>
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container px-4 px-lg-5">
@@ -21,7 +23,7 @@ function Navbar({CartCount,SetCartCount}) {
                 </li>
             </ul>
             <form className="d-flex">
-                <button className="btn btn-outline-dark" type="submit">
+                <button className="btn btn-outline-dark" type="submit" onClick={()=>navigate('/Cart')}>
                     <i className="bi-cart-fill me-1"></i>
                     Cart
                     <span className="badge bg-dark text-white ms-1 rounded-pill">{CartCount}</span>
